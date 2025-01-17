@@ -33,6 +33,7 @@ public class OrganizationDTO {
   @Schema(description = "Name of the organization", example = "BBMRI-ERIC")
   private String name;
 
+  @NotNull
   @Schema(
       description = "Description of the organization",
       example = "A European research infrastructure.")
@@ -43,4 +44,7 @@ public class OrganizationDTO {
 
   @Schema(description = "URI of the organization", example = "https://organization.org")
   private String uri;
+
+  @Schema(description = "Indicates if the organization is withdrawn", example = "false")
+  private Boolean withdrawn;
 }
